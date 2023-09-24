@@ -7,6 +7,9 @@ const List = () => {
   const [newCourse, setNewCourse] = useState("");
 
   const addCourse = () => {
+    if (!newCourse) {
+      return;
+    }
     setCourses([...courses, newCourse]);
     setNewCourse("");
   };
@@ -17,6 +20,7 @@ const List = () => {
       <input
         value={newCourse}
         onChange={(event) => setNewCourse(event.target.value)}
+        placeholder="Enter course"
       />
       <button onClick={addCourse}> Add Course </button>
       <ul>
