@@ -7,9 +7,7 @@ const List = () => {
   const [newCourse, setNewCourse] = useState("");
 
   const addCourse = () => {
-    if (!newCourse) {
-      return;
-    }
+    if (!newCourse) return;
     setCourses([...courses, newCourse]);
     setNewCourse("");
   };
