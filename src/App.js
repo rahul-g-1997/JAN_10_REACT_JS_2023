@@ -1,21 +1,23 @@
-import { useState } from 'react'
-import List from './List'
+import React, { useState } from "react";
+import List from "./List";
 
 function App() {
-  
-  const [showHeading, setShowHeading] = useState(false)
+  // Use the useState hook to manage the showHeading state
+  const [showHeading, setShowHeading] = useState(true);
 
   const toggleShowHeading = () => {
-    setShowHeading(!showHeading)
-  }
+    // Use the setShowHeading function to update the state
+    setShowHeading(!showHeading);
+  };
+
   return (
-
     <div className="App">
-      {showHeading && <h1 className="heading"> Introudction to ReactJS! </h1>}
-      <button onClick={toggleShowHeading} > Submit </button>
-      <List/>
+      {showHeading && <h1 className="heading">Introduction to ReactJS!</h1>}
+      <button onClick={toggleShowHeading} style={{ cursor: "pointer" }}>
+        Submit
+      </button>
+      <List />
     </div>
-
   );
 }
 
