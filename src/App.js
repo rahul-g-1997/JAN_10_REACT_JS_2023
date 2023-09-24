@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       {showHeading && <h1 className="heading">Introduction to ReactJS!</h1>}
       <button onClick={toggleShowHeading} style={{ cursor: "pointer" }}>
-        Submit
+        {showHeading ? "Hide" : "Show"}
       </button>
       <List />
     </div>
